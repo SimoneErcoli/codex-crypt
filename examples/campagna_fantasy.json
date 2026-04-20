@@ -1,0 +1,100 @@
+{
+  "world_name": "Terre Alte",
+  "summary": "Un regno a pezzi dove le vecchie cripte parlano ancora. Le carovane spariscono vicino alla [[Cripta di Cenere]] e la [[Locanda del Drago]] è il primo posto dove i segreti cambiano proprietario.",
+  "locations": [
+    {
+      "id": "loc_drago",
+      "name": "Locanda del Drago",
+      "type": "Locanda",
+      "description": "Posto sporco ma economico. Mercanti e tagliagole si incontrano qui prima di entrare nella Foresta di Vetra.",
+      "aliases": ["Drago"]
+    },
+    {
+      "id": "loc_cripta",
+      "name": "Cripta di Cenere",
+      "type": "Rovina",
+      "description": "Sepolcro sotterraneo inciso sotto le colline. Le pareti reagiscono al nome di [[Grog]]."
+    },
+    {
+      "id": "loc_fiume",
+      "name": "Fiume Lungo",
+      "type": "Confine naturale",
+      "description": "Taglia in due le Terre Alte. Chi controlla i traghetti del Fiume Lungo controlla i rifornimenti verso la Locanda del Drago."
+    }
+  ],
+  "npcs": [
+    {
+      "id": "npc_grog",
+      "name": "Grog",
+      "race": "Orco",
+      "role": "Buttafuori",
+      "location_ref": "loc_drago",
+      "description": "Ex soldato al soldo di una casata decaduta. Beve troppo, ma ha visto chi entra davvero nella Cripta di Cenere."
+    },
+    {
+      "id": "npc_selyra",
+      "name": "Selyra",
+      "race": "Elfa",
+      "role": "Cartografa",
+      "location_ref": "loc_fiume",
+      "description": "Vende mappe incompiute con note scritte in cifrario. Sospetta che sotto il Fiume Lungo esista un secondo accesso alla cripta."
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_01",
+      "date": "2026-04-02",
+      "title": "Le campane tacciono",
+      "description": "L'ultimo villaggio vicino alla Foresta di Vetra smette di inviare offerte al tempio. Si parla di fumo freddo sotto la collina.",
+      "related_refs": ["loc_cripta"]
+    },
+    {
+      "id": "evt_02",
+      "date": "2026-04-10",
+      "title": "Selyra torna con una mappa bruciata",
+      "description": "La cartografa vende una pergamena incompleta che indica la posizione di un ingresso segreto verso la [[Cripta di Cenere]].",
+      "related_refs": ["npc_selyra", "loc_cripta"]
+    }
+  ],
+  "session_log": {
+    "entries": [
+      {
+        "id": "session_01",
+        "title": "Sessione 06 - Il patto del traghettatore",
+        "played_on": "2026-04-18",
+        "body": "Il gruppo interroga [[Grog]] alla [[Locanda del Drago]], poi corrompe un traghettatore sul [[Fiume Lungo]]. Trovato un frammento di ossidiana incisa."
+      }
+    ]
+  },
+  "map": {
+    "image_data": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201400%20900%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22sky%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23f5ecd2%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23dac59d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221400%22%20height%3D%22900%22%20fill%3D%22url(%23sky)%22%2F%3E%3Cpath%20d%3D%22M0%20210%20C220%20140%20360%20320%20520%20240%20S860%20150%201080%20240%20S1280%20320%201400%20230%20L1400%200%20L0%200%20Z%22%20fill%3D%22%238ea48a%22%20opacity%3D%220.7%22%2F%3E%3Cpath%20d%3D%22M130%20700%20C250%20600%20430%20560%20550%20620%20S850%20760%201060%20660%20S1270%20560%201400%20640%20L1400%20900%20L0%20900%20Z%22%20fill%3D%22%239f8558%22%20opacity%3D%220.65%22%2F%3E%3Cpath%20d%3D%22M820%20150%20C920%20190%20970%20290%20960%20360%20C950%20440%201010%20520%201090%20550%22%20stroke%3D%22%23355c7d%22%20stroke-width%3D%2228%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%22320%22%20cy%3D%22350%22%20r%3D%22120%22%20fill%3D%22%23c0aa78%22%20opacity%3D%220.45%22%2F%3E%3Ccircle%20cx%3D%221090%22%20cy%3D%22280%22%20r%3D%22150%22%20fill%3D%22%23b7925a%22%20opacity%3D%220.35%22%2F%3E%3Cpath%20d%3D%22M640%20420%20L710%20470%20L690%20560%20L600%20590%20L520%20510%20L550%20430%20Z%22%20fill%3D%22%236d5d47%22%20opacity%3D%220.65%22%2F%3E%3Ctext%20x%3D%22200%22%20y%3D%22190%22%20font-family%3D%22Georgia%2C%20serif%22%20font-size%3D%2242%22%20fill%3D%22%233b2417%22%3EForesta%20di%20Vetra%3C%2Ftext%3E%3Ctext%20x%3D%22790%22%20y%3D%22120%22%20font-family%3D%22Georgia%2C%20serif%22%20font-size%3D%2244%22%20fill%3D%22%232d3b4d%22%3EFiume%20Lungo%3C%2Ftext%3E%3Ctext%20x%3D%22520%22%20y%3D%22660%22%20font-family%3D%22Georgia%2C%20serif%22%20font-size%3D%2248%22%20fill%3D%22%234b2f20%22%3ECripta%20di%20Cenere%3C%2Ftext%3E%3C%2Fsvg%3E",
+    "image_width": 1400,
+    "image_height": 900,
+    "markers": [
+      {
+        "id": "marker_secret",
+        "x": 600,
+        "y": 510,
+        "x_ratio": 0.4286,
+        "y_ratio": 0.5667,
+        "label": "Ingresso segreto",
+        "note": "Parete cedevole dietro le tombe fratturate.",
+        "related_ref": "loc_cripta"
+      },
+      {
+        "id": "marker_watch",
+        "x": 320,
+        "y": 350,
+        "x_ratio": 0.2286,
+        "y_ratio": 0.3889,
+        "label": "Ritrovo dei cacciatori",
+        "note": "Punto dove Grog vede sparire le carovane.",
+        "related_ref": "npc_grog"
+      }
+    ]
+  },
+  "metadata": {
+    "authoring_mode": "offline",
+    "updated_at": "2026-04-20T00:00:00.000Z"
+  }
+}
