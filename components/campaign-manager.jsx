@@ -659,8 +659,20 @@ export default function CampaignManager() {
       <div className="app-shell">
         <header className="hero panel">
           <div className="hero__copy">
-            <p className="eyebrow">Campaign Manager Offline</p>
-            <h1>{campaign.world_name || "Codex Crypt"}</h1>
+            <div className="hero__title-row">
+              <div className="hero__sigil" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </div>
+              <div>
+                <p className="eyebrow">Campaign Manager Offline</p>
+                <h1>{campaign.world_name || "Codex Crypt"}</h1>
+                <p className="hero__motto">
+                  Grimorio del Master, atlante del mondo e archivio dei segreti.
+                </p>
+              </div>
+            </div>
             <RichMarkup
               value={campaign.summary}
               bundle={entityBundle}
@@ -692,9 +704,9 @@ export default function CampaignManager() {
         </header>
 
         <main className="workspace">
-          <section className="panel control-panel">
+          <section className="panel control-panel panel--vault">
             <div className="panel__header">
-              <div>
+              <div className="panel__header-copy">
                 <p className="section-label">Archivio</p>
                 <h2>Importa, modifica, esporta</h2>
               </div>
@@ -787,9 +799,9 @@ export default function CampaignManager() {
             </div>
           </section>
 
-          <section className="panel inspector-panel">
+          <section className="panel inspector-panel panel--oracle">
             <div className="panel__header">
-              <div>
+              <div className="panel__header-copy">
                 <p className="section-label">Scheda attiva</p>
                 <h2>Dettagli e riferimenti</h2>
               </div>
@@ -934,9 +946,9 @@ export default function CampaignManager() {
             )}
           </section>
 
-          <section className="panel directory-panel">
+          <section className="panel directory-panel panel--atlas">
             <div className="panel__header">
-              <div>
+              <div className="panel__header-copy">
                 <p className="section-label">Luoghi</p>
                 <h2>Atlante del mondo</h2>
               </div>
@@ -1036,9 +1048,9 @@ export default function CampaignManager() {
             </form>
           </section>
 
-          <section className="panel directory-panel">
+          <section className="panel directory-panel panel--roster">
             <div className="panel__header">
-              <div>
+              <div className="panel__header-copy">
                 <p className="section-label">Personaggi</p>
                 <h2>NPC e fazioni</h2>
               </div>
@@ -1175,9 +1187,9 @@ export default function CampaignManager() {
             </form>
           </section>
 
-          <section className="panel timeline-panel">
+          <section className="panel timeline-panel panel--chronicle">
             <div className="panel__header">
-              <div>
+              <div className="panel__header-copy">
                 <p className="section-label">Timeline</p>
                 <h2>Cronologia interattiva</h2>
               </div>
@@ -1292,9 +1304,9 @@ export default function CampaignManager() {
             </form>
           </section>
 
-          <section className="panel journal-panel">
+          <section className="panel journal-panel panel--ledger">
             <div className="panel__header">
-              <div>
+              <div className="panel__header-copy">
                 <p className="section-label">Diario</p>
                 <h2>Registro sessioni</h2>
               </div>
@@ -1372,9 +1384,9 @@ export default function CampaignManager() {
             </form>
           </section>
 
-          <section className="panel generator-panel">
+          <section className="panel generator-panel panel--forge">
             <div className="panel__header">
-              <div>
+              <div className="panel__header-copy">
                 <p className="section-label">Generatori</p>
                 <h2>Nomi e loot</h2>
               </div>
@@ -1416,9 +1428,9 @@ export default function CampaignManager() {
             </div>
           </section>
 
-          <section className="panel map-panel panel--wide">
+          <section className="panel map-panel panel--wide panel--cartography">
             <div className="panel__header">
-              <div>
+              <div className="panel__header-copy">
                 <p className="section-label">Fog of War</p>
                 <h2>Mappa e marker</h2>
               </div>
